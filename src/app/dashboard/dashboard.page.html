@@ -1,3 +1,35 @@
-<ion-button type="submit" (click)="authService.SignOut()" expand="block"
-  >Logout</ion-button
->
+<ion-header  [translucent]="true">
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title> -->
+      <nav class="navbar bg-secondary">
+        <div class="container-fluid">
+          <span></span>
+          <h3 class="design-pg text-center">INTERIOR DREAM</h3>
+          <span class="navbar-text" type="submit" (click)="authService.SignOut()" ><span><img src="https://img.icons8.com/material/30/undefined/user-male-circle--v1.png"/></span>Logout</span>
+          <!-- <ion-button type="submit" (click)="authService.SignOut()" >Logout</ion-button> -->
+        </div>
+      </nav>
+    <!-- </ion-title> -->
+  <!-- </ion-toolbar> -->
+</ion-header>
+
+<ion-content  class="background-image"[fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+
+  <div class="container">
+    <ion-searchbar class="search mt-5"></ion-searchbar>
+    <h1 class="text-white text-center"><B>We make your Home</B></h1>
+    <h3 class="main-text text-center"><b>Trasform your space from</b></h3>
+      <h3 class="main-text text-center"><b>before to after your dreams...</b></h3>
+    <!-- <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p> -->
+  </div>
+  <div class="container mainbt">
+    <ion-button expand="block" class="start" routerLink="/main">Get Started</ion-button>
+  </div>
+</ion-content>
+
+
+
+
+

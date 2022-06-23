@@ -13,9 +13,11 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
+import { MainComponent } from './main/main.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,MainComponent,CartComponent],
   entryComponents: [],
   imports: [
     BrowserModule,

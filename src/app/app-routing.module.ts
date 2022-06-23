@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { CartComponent } from './cart/cart.component';
+import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {
@@ -31,6 +33,8 @@ const routes: Routes = [
     path: 'password-reset',
     loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
+  {path:'main',component:MainComponent},
+  {path:'cart',component:CartComponent}
 ];
 
 @NgModule({

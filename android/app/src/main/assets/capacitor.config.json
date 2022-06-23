@@ -1,0 +1,6 @@
+{
+	"appId": "people.interior.hub",
+	"appName": "ionic-firebase-authentication",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

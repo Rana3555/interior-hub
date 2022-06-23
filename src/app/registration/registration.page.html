@@ -1,21 +1,28 @@
 <ion-header>
-  <ion-toolbar>
+  <!-- <ion-toolbar> -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Register User</ion-title>
-  </ion-toolbar>
+    <!-- <ion-title>Register User</ion-title> -->
+  <!-- </ion-toolbar> -->
 </ion-header>
 
-<ion-content>
+<ion-content class="background-image">
+  <ion-card class="main-card">
   <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
+    <div class="imgcontainer">
+      <img src="../../assets/avatar-icon.svg" alt="Avatar" class="avatar">
+      <ion-text color="success">
+        <h1 class="text-center" style="color:#e0652c"><strong> Registration</strong></h1>
+      </ion-text>
+    </div>  
+    <ion-item class="line" lines="full">
+      <ion-label position="floating">Email :</ion-label>
       <ion-input type="text" #email required></ion-input>
     </ion-item>
-
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
+    <br>
+    <ion-item class="line" lines="full">
+      <ion-label position="floating">Password :</ion-label>
       <ion-input type="password" #password required></ion-input>
     </ion-item>
 
@@ -30,4 +37,5 @@
       </ion-col>
     </ion-row>
   </form>
+</ion-card>
 </ion-content>

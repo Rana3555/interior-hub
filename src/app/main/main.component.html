@@ -1,0 +1,47 @@
+<ion-header  [translucent]="true">
+  <nav class="navbar bg-secondary">
+    <div class="container-fluid">
+      <span><img src="https://img.icons8.com/material/30/undefined/shopping-cart--v1.png"/></span>
+      <h3 class="design-pg text-center">INTERIOR IDEAS</h3>
+      <span class="navbar-text" type="submit" (click)="authService.SignOut()" ><span><img src="https://img.icons8.com/material/30/undefined/user-male-circle--v1.png"/></span>Logout</span>
+    </div>
+  </nav> 
+</ion-header>
+
+<ion-content fullscreen class="ion-padding background-image" scroll-y="false">
+<ion-slides>
+<ion-slide>
+  <h3><b>Welcome</b></h3>
+  <div class="slide">
+    <img src="../../assets/next page 1.jpg" />
+    <h2>Design is a Journey of Discovery</h2>
+    <p>
+      <b>Every room</b> needs a touch of black just as it needs on antique piece. </p>
+  </div>
+  <ion-button fill="clear">Slide for next <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+</ion-slide>
+
+<ion-slide>
+  <img src="../../assets/next page 2.jpg" />
+  <h2>The Home</h2>
+  <p>
+    <b>Design is</b> A room should never allow the ete to settle in one place. It should smile at you and creat fantsy.</p>
+  <ion-button fill="clear">Slide for next <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+</ion-slide>
+
+<ion-slide>
+  <img src="../../assets/image trans.gif" />
+  <h2>Transform your Living Space</h2>
+  <p>
+    <b>The Best</b> rooms have somthing to say about the people who live in them.</p>
+  <ion-button fill="clear">Slide for next <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+</ion-slide>
+
+<ion-slide>
+  <h2>Trasnform your Interior</h2>
+  <img src="../../assets/next-page.gif" />
+  <h2>Ready to Transform?</h2>
+  <ion-button routerLink="/cart" fill="clear" >Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+</ion-slide>
+</ion-slides>
+</ion-content>

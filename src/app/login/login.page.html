@@ -1,28 +1,37 @@
 <ion-header>
-  <ion-toolbar>
+  <!-- <ion-toolbar> -->
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Sign in User</ion-title>
-  </ion-toolbar>
+    <!-- <ion-title>Sign in User</ion-title> -->
+
+  <!-- </ion-toolbar> -->
 </ion-header>
 
-<ion-content>
-  <ion-item lines="full">
-    <ion-label position="floating">Email</ion-label>
+<ion-content class="background-image">
+  <ion-card class="main-card">
+  <form>
+  <div class="imgcontainer">
+    <img src="../../assets/avatar-icon.svg" alt="Avatar" class="avatar">
+    <ion-text color="success">
+      <h1 class="text-center" style="color:#e0652c"><strong> Login</strong></h1>
+    </ion-text>
+  </div>  
+  <ion-item  lines="full" class="full-text line">
+    <ion-label position="floating">Email :</ion-label>
     <ion-input type="text" #email required></ion-input>
-  </ion-item>
+  </ion-item><br>
 
-  <ion-item lines="full">
-    <ion-label position="floating">Password</ion-label>
+  <ion-item class="line" lines="full">
+    <ion-label position="floating">Password :</ion-label>
     <ion-input type="password" #password required></ion-input>
   </ion-item>
+
 
   <ion-row>
     <ion-col>
       <ion-button type="submit" (click)="logIn(email, password)" expand="block"
-        >Login</ion-button
-      >
+        >Login</ion-button>
     </ion-col>
   </ion-row>
 
@@ -30,24 +39,24 @@
     <ion-col>
       <ion-button
         expand="block"
-        color="warning"
-        [routerLink]="['/password-reset']"
-      >
+        color="success"
+        [routerLink]="['/password-reset']">
         Password Reset
       </ion-button>
     </ion-col>
   </ion-row>
+</form>
 
-  <ion-row>
+  <!-- <ion-row>
     <ion-col>
       <ion-button
         type="submit"
         color="danger"
         (click)="authService.GoogleAuth()"
-        expand="block"
-      >
+        expand="block">
         Login with Google
       </ion-button>
     </ion-col>
-  </ion-row>
+  </ion-row> -->
+  </ion-card>
 </ion-content>

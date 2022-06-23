@@ -1,0 +1,77 @@
+<ion-header  [translucent]="true">
+  <!-- <ion-toolbar> -->
+    <!-- <ion-title> -->
+      <nav class="navbar bg-secondary">
+        <div class="container-fluid">
+          <span><img src="https://img.icons8.com/material/30/undefined/shopping-cart--v1.png"/></span>
+          <h3 class="design-pg text-center">INTERIOR ITEMS</h3>
+          <span class="navbar-text" type="submit" (click)="authService.SignOut()" ><span><img src="https://img.icons8.com/material/30/undefined/user-male-circle--v1.png"/></span>Logout</span>
+        </div>
+      </nav>
+    <!-- </ion-title> -->
+  <!-- </ion-toolbar> -->
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/Price 1.jpg" alt="">
+          <ion-card-title>Galexy hanger</ion-card-title>
+          <ion-card-subtitle>$ 4.00</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/price 2.jpg" alt="">
+          <ion-card-title>Galexy  Bottles</ion-card-title>
+          <ion-card-subtitle>$ 6.50</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/price 3.jpg" alt="">
+          <ion-card-title>Pebbles Colored</ion-card-title>
+          <ion-card-subtitle>$ 6.50</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/price 4.jpg" alt="">
+          <ion-card-title>Black Jars</ion-card-title>
+          <ion-card-subtitle>$ 5.60</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/price 5.jpg" alt="">
+          <ion-card-title>Clock Wallpaper</ion-card-title>
+          <ion-card-subtitle>$ 6.50</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <ion-col>
+      <div><ion-card>
+        <ion-card-header>
+          <img src="assets/price 6.jpg" alt="">
+          <ion-card-title>Wall Mirror</ion-card-title>
+          <ion-card-subtitle>$ 4.00</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card></div>
+    </ion-col>
+    <div class="container mainbt">
+      <ion-button expand="block" color="secondary" routerLink="/dashboard">Back to Home</ion-button>
+      <!-- <ion-button expand="block" class="start" routerLink="/design">Get Started</ion-button> -->
+    </div>
+  </ion-row>
+</ion-grid>
+</ion-content>
