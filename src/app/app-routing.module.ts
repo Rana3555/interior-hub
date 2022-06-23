@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
 import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
     loadChildren: () => import('./password-reset/password-reset.module').then( m => m.PasswordResetPageModule)
   },
   {path:'main',component:MainComponent},
-  {path:'cart',component:CartComponent}
+  {path:'cart',component:CartComponent},
+  {path: 'google-map',component:GoogleMapComponent }
 ];
 
 @NgModule({

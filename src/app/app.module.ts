@@ -15,9 +15,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
-  declarations: [AppComponent,MainComponent,CartComponent],
+  declarations: [AppComponent,MainComponent,CartComponent,GoogleMapComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   entryComponents: [],
   imports: [
     BrowserModule,
