@@ -104,6 +104,22 @@ export class GoogleMapComponent implements OnInit {
         // title: ,
         draggable: true
       },
+      {
+        coordinate: {
+          lat: 17.447773,
+          lng: 78.3585804
+        },
+        // title: ,
+        draggable: true
+      },
+      {
+        coordinate: {
+          lat: 12.9542946,
+          lng: 77.4908547
+        },
+        // title: ,
+        draggable: true
+      },
     ]);
   }
   
