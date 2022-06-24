@@ -9,64 +9,146 @@ import { environment } from 'src/environments/environment';
 })
 export class GoogleMapComponent implements OnInit {
 
-  @ViewChild('map') mapRef: ElementRef<HTMLElement>; 
+  @ViewChild('map') mapRef: ElementRef<HTMLElement>;
   newMap: GoogleMap;
   center: any = {
-    lat: 17.7138476,
-    lng: 83.315665,
+    lat: 17.7384734,
+    lng: 82.9823971
   };
-
   markerId: string;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    this.createMap ();
   }
 
   ngAfterViewInit() {
     this.createMap();
   }
 
- async createMap() {
-    this.newMap = await GoogleMap.create({
-      id: 'capacitor-google-maps',
-      element: this.mapRef.nativeElement,
-      apiKey: environment.google_maps_api_key,
-      config: {
-        center: this.center,
-        zoom: 8,
-      },
-    });
-    this.addMarker(this.center.lat, this.center.lng);
+  async createMap() {
+    try {
+      this.newMap = await GoogleMap.create({
+        id: 'capacitor-google-maps',
+        element: this.mapRef.nativeElement,
+        apiKey: environment.google_maps_api_key,
+        config: {
+          center: this.center,
+          zoom: 5,
+        },
+      });
+
+      // Move the map programmatically
+      await this.newMap.setCamera({
+        coordinate: {
+          lat: this.center.lat,
+          lng: this.center.lng,
+          // lat: 28.782991, 
+          // lng: 76.945626,
+        },
+        animate: true
+      });
+
+        // Enable marker clustering
+      // await this.newMap.enableClustering();
+
+        // Enable traffic Layer
+        
+        // for traffic
+      // await this.newMap.enableTrafficLayer(true);
+
+      // for current loocation with out pointer
+      // await this.newMap.enableCurrentLocation(true);
+
+      // await this.newMap.setPadding({
+      //   top: 50,
+      //   left: 50,
+      //   right: 0,
+      //   bottom: 0,
+      // });
+
+      // await this.newMap.setMapType(MapType.Satellite);
+  
+      this.addMarkers(this.center.lat, this.center.lng);
+      this.addListeners();
+    } catch(e) {
+      console.log(e);
+    }
   }
-//  marker location
-  async addMarker (lat,lng) {
+
+  async addMarkers(lat, lng) {
+    // Add a marker to the map
+    // if(this.markerId) this.removeMarker();
+    await this.newMap.addMarkers([
+      {
+        coordinate: {
+          lat: lat,
+          lng: lng,
+        },
+        // title: ,
+        draggable: true
+      },
+      {
+        coordinate: {
+          lat: 17.7384734, 
+          lng: 82.9823971,
+        },
+        // title: ,
+        draggable: true
+      },
+      {
+        coordinate: {
+          lat: 17.4385638,
+          lng: 78.0229312,
+        },
+        // title: ,
+        draggable: true
+      },
+    ]);
+  }
+  
+  async addMarker(lat, lng) {
+    // Add a marker to the map
+    // if(this.markerId) this.removeMarker();
     this.markerId = await this.newMap.addMarker({
       coordinate: {
         lat: lat,
         lng: lng,
       },
-        draggable: true
+      // title: ,
+      draggable: true
     });
-  }
-// remover mark
-  async removeMarker() {
-    await this.newMap.removeMarker(this.markerId);
   }
 
-  // handle mmarker click
-  async addListeners(){
-    await this.newMap.setOnInfoWindowClickListener((event) =>{
-      console.log(event);
+  async removeMarker(id?) {
+    await this.newMap.removeMarker(id ? id : this.markerId);
+  }
+
+  async addListeners() {
+    // Handle marker click
+    await this.newMap.setOnMarkerClickListener((event) => {
+      console.log('setOnMarkerClickListener', event);
+      this.removeMarker(event.markerId);
     });
-    
-    // await this.newMap.setOnCameraMoveStartedListener((event) =>{
+
+    // await this.newMap.setOnCameraMoveStartedListener((event) => {
     //   console.log(event);
     // });
-    
 
+    await this.newMap.setOnMapClickListener((event) => {
+      console.log('setOnMapClickListener', event);
+      this.addMarker(event.latitude, event.longitude);
+    });
+
+    await this.newMap.setOnMyLocationButtonClickListener((event) => {
+      console.log('setOnMyLocationButtonClickListener', event);
+      // this.addMarker(event.latitude, event.longitude);
+    });
+
+    await this.newMap.setOnMyLocationClickListener((event) => {
+      console.log('setOnMyLocationClickListener', event);
+      this.addMarker(event.latitude, event.longitude);
+    });
   }
-
 
 }
