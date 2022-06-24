@@ -153,7 +153,7 @@ export class GoogleMapComponent implements OnInit {
 
     await this.newMap.setOnMapClickListener((event) => {
       console.log('setOnMapClickListener', event);
-      this.addMarker(event.latitude, event.longitude);
+      // this.addMarker(event.latitude, event.longitude);
     });
 
     await this.newMap.setOnMyLocationButtonClickListener((event) => {
