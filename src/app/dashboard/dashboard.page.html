@@ -26,8 +26,22 @@
   </div>
   <div class="container mainbt">
     <ion-button expand="block" class="start" routerLink="/main">Get Started</ion-button><br>
-    <ion-button expand="block" routerLink="/google-map" >click to see our Locations</ion-button>
+    <!-- <ion-button expand="block" color="success" routerLink="/google-map" >click to see our Locations</ion-button> -->
   </div>
+  <!-- bottom button -->
+  <ion-fab horizontal="start" vertical="bottom" slot="fixed">
+    <ion-fab-button>
+      <ion-icon md="caret-forward" ios="chevron-forward-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button color="light">
+        <ion-icon name="location" routerLink="/google-map" color="success" ></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light">
+        <ion-icon name="logo-google"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
 
 
