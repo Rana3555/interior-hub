@@ -4,4 +4,5 @@
     <string name="title_activity_main">ionic-firebase-authentication</string>
     <string name="package_name">people.interior.hub</string>
     <string name="custom_url_scheme">io.ionic.people.interior.hub</string>
+    <string name="google_maps_api_key">AIzaSyC-7rXRX4CLHi5EuDVYM6-VEta_0ZeO6Qg</string>
 </resources>
