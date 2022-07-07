@@ -25,12 +25,15 @@
         >
         <span class="divider line one-line">or</span>
         <span class="already"> already a user?</span>
-        <ion-button [routerLink]="['/login']" expand="block" color="primary"
-          >Sign In</ion-button
-        >
+        <ion-button [routerLink]="['/login']" expand="block" color="primary">Sign In</ion-button >
       </ion-col>
     </ion-row>
   </form>
   </ion-grid>
 </ion-card>
+<ion-item>
+  <ion-label>TOKEN:</ion-label>
+  <ion-textarea [(ngModel)]="token" rows="8">
+  </ion-textarea>
+</ion-item>
 </ion-content>

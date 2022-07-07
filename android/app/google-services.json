@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "937820323966",
+    "firebase_url": "https://firstapp-ea74c-default-rtdb.firebaseio.com",
+    "project_id": "firstapp-ea74c",
+    "storage_bucket": "firstapp-ea74c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937820323966:android:ffe36efdc283eca6d1182f",
+        "android_client_info": {
+          "package_name": "people.interior.hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937820323966-s5ivajhuikd84uog0qpseud57tlsn65t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCsLDX4f2dpaKWGwf-ffpWp1vJ03sHncQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937820323966-s5ivajhuikd84uog0qpseud57tlsn65t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
